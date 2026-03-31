@@ -1,1 +1,5 @@
 .Rproj.user
+output/*.rds
+output/*.png
+data/*.rds
+*.html
