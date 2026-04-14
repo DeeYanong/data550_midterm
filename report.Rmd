@@ -4,3 +4,29 @@ output: html_document
 ---
 
 # add code for each section
+```{r}
+library(dplyr)
+library(readr)
+library(labelled)
+library(readr)
+
+```
+```{r}
+library(readr)
+library(dplyr)
+
+data <- read_csv("data/covid_sub.csv")
+
+clean_data <- data %>%
+  select(-any_of(c("USMER", "MEDICAL_UNIT", "PREGNANT"))) %>%
+  rename(DEATH = DATE_DIED) %>%
+  mutate(
+    DEATH = ifelse(is.na(DEATH), "No", "Yes"),
+    DEATH = factor(DEATH, levels = c("No", "Yes"))
+  )
+
+dim(clean_data)
+
+saveRDS(clean_data, "data/clean_data.rds")
+```
+
