@@ -18,3 +18,15 @@ here::i_am(
 data <- readRDS(here::here("data/clean_data.rds"))
 ```
 
+## Multivariable Regression Analysis
+
+We conducted multivariable logistic regression analyses to examine the association between demographic and clinical factors and three severe COVID-19 outcomes: ICU admission, intubation, and death. Each model included age, sex, and comorbidities such as pneumonia, diabetes, COPD, asthma, immunosuppression, hypertension, cardiovascular disease, obesity, renal disease, and tobacco use.
+
+The results are presented as odds ratios with 95% confidence intervals. An odds ratio greater than 1 indicates increased odds of the outcome, while an odds ratio less than 1 indicates decreased odds.
+
+The table below summarizes the regression results for all three outcomes, allowing comparison of the relative importance of different predictors across ICU admission, intubation, and mortality.
+
+```{r, regression analysis code}
+
+```
+
