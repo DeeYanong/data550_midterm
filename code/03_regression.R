@@ -59,5 +59,4 @@ results_table <- bind_rows(
   tidy_or(mod_death, "Death")
 )
 
-write_csv(results_table, here("output", "table_regression_results.csv"))
-print(results_table)
+saveRDS(results_table, here("output", "table_regression_results.rds"))
