@@ -1,5 +1,5 @@
 here::i_am(
-  "code/render_report.R"
+  "code/04_render_report.R"
 )
 
 rmarkdown::render(

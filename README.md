@@ -15,7 +15,8 @@ Code Description
 
 - adds labels
 
-- saves cleaned dataset as a .rds object in `data/` folder
+- saves cleaned dataset as a .rds object (`clean_data.rds`) in `data/`
+  folder
 
 `code/02_make_visuals`
 
@@ -23,11 +24,18 @@ Code Description
 
 - makes figures and saves in the `output/` folder
 
+  - `fig_intubation_by_age.png`
+
+  - `fig_intubation_by_sex.png`
+
+  - `fig_intubation_by_comorbidity.png`
+
 `code/03_regression.R`
 
 - creates a logistic regression model for each of the outcome variables
 
-- saves the results in the `output` folder
+- saves the results as an rds object (`table_regression_results.rds`) in
+  the `output` folder
 
 `code/render_report.R`
 

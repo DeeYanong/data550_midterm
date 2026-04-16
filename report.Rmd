@@ -3,19 +3,26 @@ title: "report"
 output: html_document
 ---
 
-# add code for each section
-```{r}
+```{r, include=FALSE}
 library(readr)
 library(dplyr)
 library(here)
-```
 
-```{r}
 here::i_am(
   "report.Rmd"
 )
+```
 
+This report analyzes data on COVID-19 outcomes from Mexico.
+```{r, echo=FALSE}
 data <- readRDS(here::here("data/clean_data.rds"))
+```
+
+## Figures
+```{r, echo=FALSE}
+knitr::include_graphics(here::here("output/fig_intubation_by_age.png"))
+knitr::include_graphics(here::here("output/fig_intubation_by_sex.png"))
+knitr::include_graphics(here::here("output/fig_intubation_by_comorbidity.png"))
 ```
 
 ## Multivariable Regression Analysis
@@ -26,7 +33,8 @@ The results are presented as odds ratios with 95% confidence intervals. An odds 
 
 The table below summarizes the regression results for all three outcomes, allowing comparison of the relative importance of different predictors across ICU admission, intubation, and mortality.
 
-```{r, regression analysis code}
-
+```{r, echo=FALSE}
+res <- readRDS(here::here("output/table_regression_results.rds"))
+head(res, 39)
 ```
 
