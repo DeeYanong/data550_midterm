@@ -52,13 +52,27 @@ Code Description
 
 - Reads in contents of the `results/` folder
 
+`config.yml`
+
+- specifies configuration settings
+
+- Default: Only confirmed cases
+
+- All: all confirmed and possible cases
+
 `Makefile`
 
-- Can be used to render the contents of the code/ folder, including
+- Can be used to render the contents of the `code/` folder, including
   rendering the report
 
-- Can remove .rds, .png, and .html files using the clean command
+- To run the code with default settings either type `make` or
+  `WHICH_CONFIG="default" make report_config_default.html` in the
+  terminal
 
-- The variable `WHICH_CONFIG` has specifies using the default setting of
-  only including confirmed cases. To include all possible cases, change
-  `WHICH_CONFIG` to `all`
+- To run the code with all cases type
+  `WHICH_CONFIG="all" make report_config_all.html` in the terminal
+
+- Use the command `make install` to restore the project library using
+  renv
+
+- Can remove .rds, .png, and .html files using the `clean` command
